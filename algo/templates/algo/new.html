@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новое</title>
+    <style>
+        .a {
+            width: 1000px;
+        }
+        .btn {
+            width: 1000px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="new">Новове вычисление</a>
+    <a href="view">Все вычисления</a>
+    <a href="filters">Фильтры</a>
+    <a href="/me">Обо мне</a>
+
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.a }} <br>
+        <span>{{ result }}</span><br>
+        <button type="submit" class="btn">Вычислить</button>
+    </form>
+
+
+</body>
+</html>

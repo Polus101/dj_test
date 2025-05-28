@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новое</title>
+    <style>
+        .a {
+            width: 1000px;
+        }
+        .btn {
+            width: 1000px;
+        }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                font-family: sans-serif;
+                margin: 20px 0;
+                box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+            }
+            
+            th, td {
+                padding: 12px 15px;
+                text-align: left;
+                border-bottom: 1px solid #e0e0e0;
+            }
+            
+            th {
+                background-color: #f8f8f8;
+                font-weight: 600;
+                color: #333;
+            }
+            
+            thead th {
+                border-bottom: 2px solid #ddd;
+            }
+
+    </style>
+</head>
+<body>
+
+    <a href="new">Новове вычисление</a>
+    <a href="view">Все вычисления</a>
+    <a href="filters">Фильтры</a>
+    <a href="/me">Обо мне</a>
+
+    
+
+
+    <table>
+        <thead>
+            <tr>
+            <th scope="col">A</th>
+            <th scope="col">X</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for calc in calcs %}
+                <tr>
+                    <th scope="row">{{calc.a}}</th>
+                    <td>{{calc.x}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+
+</body>
+</html>

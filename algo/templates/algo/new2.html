@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новое</title>
+    <style>
+        .fio {
+            width: 1000px;
+        }
+        .image {
+            width: 1000px;
+        }
+        .html_block {
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="new">Новове вычисление</a>
+    <a href="view">Все вычисления</a>
+    <a href="filters">Фильтры</a>
+    <a href="/me">Обо мне</a>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Первое число"><br>
+        <input type="text" placeholder="Второе число"><br>
+        <input type="text" placeholder="Третье число"><br>
+        <button type="submit">Вычислить</button>
+    </form>
+<br><br><br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.fio }} <br>
+        {{ form.image }}<br>
+        {{ form.html_block }}<br>
+        <span>{{ result }}</span><br>
+        <!-- <input type="text" placeholder="fio"><br>
+        <input type="text" placeholder="image"><br>
+        <textarea placeholder="html block"></textarea><br> -->
+        <button type="submit">Добавить манагера</button>
+    </form>
+
+</body>
+</html>
